@@ -11,7 +11,9 @@ mongo = PyMongo(app)
 CORS(app)
 
 db = mongo.db.users
-
+@app.route('/')
+def home():
+    return jsonify({"Error": "404"})
 @app.route('/users', methods=['POST'])
 def createUser():
     id = db.insert_one({
