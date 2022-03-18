@@ -4,7 +4,7 @@ from flask_pymongo import PyMongo, ObjectId
 from flask_cors import CORS
 
 app = Flask(__name__)
-app.config['MONGO_URI'] ='mongodb+srv://admin:admin@cluster0.akami.mongodb.net/users'
+app.config['MONGO_URI'] ='mongodb://admin:admin@cluster0-shard-00-00.akami.mongodb.net:27017,cluster0-shard-00-01.akami.mongodb.net:27017,cluster0-shard-00-02.akami.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-hs05il-shard-0&authSource=admin&retryWrites=true&w=majority'
 
 mongo = PyMongo(app)
 
